@@ -10,8 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 # Introduction  
 
-We are doing Alcohol vs Seat choice   
-Is there a difference between the alcohol consumed between row number you choose to sit in?  
+The data came from UCDavis.csv in the year 
+
+our goal is to answer this question if there a difference between the alcohol consumed between row number you choose to sit in?  
 
 
 ```{r include=FALSE}
@@ -21,6 +22,9 @@ davisdata <- read.csv(file="UCDavis.csv")
 ```
 ## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row
 ## you choose to sit in??
+
+
+
 
 ## Now with ggplot - first select the basic data
 
