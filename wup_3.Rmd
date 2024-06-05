@@ -23,7 +23,9 @@ davisdata <- read.csv(file="UCDavis.csv")
 ## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row
 ## you choose to sit in??
 
+$H_0$: There is no difference between the average number of drinks imbibed between people conditioned on the row they sit in.  
 
+$H_A$: There is a difference in the average number drinks is different between at least two rows. 
 
 
 ## Now with ggplot - first select the basic data
