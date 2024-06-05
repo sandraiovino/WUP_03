@@ -8,6 +8,11 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# Introduction  
+
+We are doing Alcohol vs Seat choice   
+Is there a difference between the alcohol consumed between row number you choose to sit in?  
+
 
 ```{r include=FALSE}
 require(tidyverse)
