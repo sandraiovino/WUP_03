@@ -8,25 +8,24 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# Introduction  
-
-The data came from UCDavis.csv in the year 
-
-our goal is to answer this question if there a difference between the alcohol consumed between row number you choose to sit in?  
-
+ 
 
 ```{r include=FALSE}
 require(tidyverse)
 require(tigerstats)
 davisdata <- read.csv(file="UCDavis.csv")
 ```
+
+# Introduction  
+The data came from UCDavis.csv in the year. 
+our goal is to answer this question if there a difference between the alcohol consumed between row number you choose to sit in?   
+
 ## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row
 ## you choose to sit in??
 
 $H_0$: There is no difference between the average number of drinks imbibed between people conditioned on the row they sit in.  
 
-$H_A$: There is a difference in the average number drinks is different between at least two rows. 
-
+$H_A$: There is a difference in the average number drinks is different between at least two rows.
 
 # Methods  
 In the data set davisdata seat is a categorical variable, alcohol is numerical   
@@ -34,15 +33,40 @@ In the data set davisdata seat is a categorical variable, alcohol is numerical
 We try to predict alcohol ~ Seat so we use the  helper file    
 Num ~ Cat  
 
+# Results 
+
+## Descriptive Results
+
+
+### Graphical summary 
+
+```{r}
+basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
+```
+
+Now add in boxplot
+
+```{r}
+basicCN <- ggplot(davisdata,aes(x=Seat,y=alcohol))
+
+basicCN + geom_boxplot()
+```
+
+  What this graph shows is that the back seat has the highest alcohol consume then the front or middle seats.  
+
+
+### Numerical Summary
+
+
+### Inferential Results
+
+# Discussion and Conclusion
+
 
 
 
 ## Now with ggplot - first select the basic data
 
-```{r}
-basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
-```
-## Now add in boxplot
 
 ```{r}
 basicCN + geom_boxplot()
@@ -55,9 +79,6 @@ basicCN + geom_boxplot()
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
-## Numerical Summarys 
-
-## Inferential Tests
 
 ## Conclusions
 
