@@ -67,7 +67,7 @@ model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
 
- The P-value is 0.0001 which is less than 0.05 so we reject the null hypothesis. 
+ The P-value is 0.0001 which is less than 0.05 so we reject the null hypothesis.This graph show that there is a difference in the average number drinks is different between at least two rows.  
  
 ### get fancy  
 
@@ -77,7 +77,14 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 
   This graph shows that there are more students sitting in the back who drink alcohol than the front and middle row. 
 
-## Conclusions
- our goal is to answer this question if there a difference between the alcohol consumed between row number you choose to sit in? When doing our GGplots we noticed that more seaters in the back consumed more alcohol Our P-value was 0.0001 which is less than 0.05 so we reject the null hypothesis. There is a difference when seating in the back. More seater in the bak drink more alcohol than the ones in the middle or front.    
+## Turkeymodel 
+```{r}
+plot(TukeyHSD(model1))
+```
 
+This turkey model shows there is a difference when seating in the back rather then the front or middle. The back consumes more levels of alcohol than the front or middle.  
+
+## Conclusions
+ Our goal is to answer this question, if there is a difference between the alcohol consumed between the row number you choose to sit in? When doing our GGplots we noticed that the back row consumed more alcohol than the front or middle. Our P-value was 0.0001 which is less than 0.05 so we reject the null hypothesis "$H_0$: There is no difference between the average number of drinks imbibed between people conditioned on the row they sit in".  
+ Which makes our $H_A$ true, there is a difference when seating in the back. When doing the TukeyHSD model it shows that the level of consumed alcohol was higher in the back row then the front or middle rows.   
 
