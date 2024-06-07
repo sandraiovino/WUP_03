@@ -56,7 +56,10 @@ basicCN + geom_boxplot()
 
 
 ### Numerical Summary
-
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+  When entering the Numerical Summary, this show that back seat consumes about 55% of alcohol, Front   consumes about 20% of alcohol and the middle is about 35% of alcohol. This means that the back seats    consumes more alcohol than the front or middle seats.    
 
 ### Inferential Results
 
