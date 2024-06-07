@@ -67,14 +67,17 @@ model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
 
-  
+ The P-value is 0.0001 which is less than 0.05 so we reject the null hypothesis. 
+ 
 ### get fancy  
 
 ```{r}
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
+  This graph shows that there are more students sitting in the back who drink alcohol than the front and middle row. 
 
 ## Conclusions
+ our goal is to answer this question if there a difference between the alcohol consumed between row number you choose to sit in? When doing our GGplots we noticed that more seaters in the back consumed more alcohol Our P-value was 0.0001 which is less than 0.05 so we reject the null hypothesis. There is a difference when seating in the back. More seater in the bak drink more alcohol than the ones in the middle or front.    
 
 
